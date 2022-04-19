@@ -152,7 +152,8 @@
   - As the predictors were mainly categorical variables to begin with and the few continuous variables were all converted to categorical variables, KMeans would no longer be an option to be used for clustering. KModes was used instead. 
   - Works by calculating dissimilarity between the data points. 
   - The optimal number of clusters, also the hyperparameter K, was determined by plotting an Elbow curve and the optimal number was chosen at the area where the curve bends. 
-  - 6 was chosen for all KModes performed after different imbalance treatment methods.  Therefore, 6 points were picked at random to label as clusters. 
+  - 6 was chosen for all KModes performed after different imbalance treatment methods.  
+  - Therefore, 6 points were picked at random to label as clusters. 
   - Dissimilarities were then calculated and each observation was assigned to the closest cluster. New modes of clusters were redefined and the process repeats until there is no more re-assignment of points.
   - After clustering with all types of imbalance treatments, all were found to be ineffective in grouping the different Genetic Disorder classes, particularly between single-gene and mitochondrial disorders.
 ![image8](https://user-images.githubusercontent.com/92092401/163974488-5423999a-5c57-451d-a991-addd0759d31e.png)
