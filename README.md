@@ -1,5 +1,4 @@
 # SC5010-project
-# SC5010-project
 ### Contributors
   - Guan Jia Sheng (U2040851A)
   - Nguyen Ngoc Minh Truc (U1940862C)
@@ -33,7 +32,7 @@
 ## Missing Values Treatment
   - Genetic Disorder column directly related to the Disorder Subclass
   - Missing values in Genetic Disorder directly filled with values based on the Disorder Subclass
-Diabetes![missing value](https://user-images.githubusercontent.com/92092401/163960654-0e2e6bd6-7bf8-45ec-a797-e6044bc11d54.JPG)
+![1](images/image1.png)
 
 
 
@@ -47,7 +46,7 @@ Diabetes![missing value](https://user-images.githubusercontent.com/92092401/1639
   - IterativeImputer and SimpleImputer yielded similarity in this dataset when a Random Forest model is built
   - Either one can be used in this dataset
 
-![simpleimputer](https://user-images.githubusercontent.com/92092401/163961066-2e836b43-3a35-49ae-b2a1-fb0d09a679d5.JPG)
+![1](images/image22.png)
 
 ### Imbalance Treatment
 Imbalance
@@ -74,7 +73,9 @@ Imbalance
   - Best imbalance treatment method amongst the ones tried.
 
 ### Comparison of imbalance treatment methods
-![imbalance treatment](https://user-images.githubusercontent.com/92092401/163961302-801c2e13-3c5b-4457-a5be-1d178f927409.JPG)
+![image9](https://user-images.githubusercontent.com/92092401/163973594-cd92861d-6112-4348-93ac-a0c0a5e7a8f3.png)
+![image10](https://user-images.githubusercontent.com/92092401/163973611-70f031d1-0199-40df-9fb3-aa3b03ba802f.png)
+
 
   - Class imbalance was noticeable in both Genetic Disorder and Disorder Subclass
   - The performance of imbalance treatment decreases in the following order: SMOTE > Oversampling > Undersampling > Imbalance 
@@ -93,16 +94,19 @@ Imbalance
 ### Naive Bayes
   - Naive Bayes is a probabilistic model which can be used in Multiclass Classification, suitable for prediction of Genetic Disorder and Disorder Subclass. 
 
-![eqn 1](https://user-images.githubusercontent.com/92092401/163961444-2152a46c-371d-4799-80d1-b4fb655c24ca.JPG)
+![index2](https://user-images.githubusercontent.com/92092401/163973727-3163cdc7-106a-4552-b3b6-a77414e74964.png)
+
 
   - Bayes Theorem allows the finding of probability of a Genetic Disorder class (hypothesis) happening given a certain set of predictor values (evidence)
   - Assumption of Bayes Theorem
     - Predictors are independent and that all predictors have equal effect on the outcome 
   - Due to the denominator being a constant, it can be removed in the above equation to give the equation below.
-![eqn 2](https://user-images.githubusercontent.com/92092401/163961524-134a9509-2913-468a-a22c-a13bd49858f0.JPG)
+![image3](https://user-images.githubusercontent.com/92092401/163973769-7d72a7a5-2234-498f-92bb-974fdad86c70.png)
+
 
   - Class of Genetic Disorder assigned by finding the class with the highest probability with the given predictors
-![eqn 3](https://user-images.githubusercontent.com/92092401/163961597-82485ecc-1005-4b2b-af6a-fc12e393d912.JPG)
+![image4](https://user-images.githubusercontent.com/92092401/163973789-f8b7800f-513b-4823-9310-5d735f7a1e6c.png)
+
 
   - Naive Bayes did not work as well as other supervised learning models in this project and thus was not chosen to be used in the final model
 
@@ -123,8 +127,8 @@ Imbalance
 
 
 ### Supervised Learning Model Performance Comparison - SMOTE and Stratified against Genetic Disorder
-![11](https://user-images.githubusercontent.com/92092401/163964357-c3e7ec9d-070f-4c39-8881-e35c61ede311.JPG)
-![12](https://user-images.githubusercontent.com/92092401/163964994-43578f97-4412-4012-80ba-eec4d884ea81.JPG)
+![image9](https://user-images.githubusercontent.com/92092401/163974365-19c85710-b160-4009-b8a9-1405304e0028.png)
+![image10](https://user-images.githubusercontent.com/92092401/163974375-19e6af7b-ad60-4984-9e1e-8abacd141ab2.png)
   - Support Vector Machine had the highest accuracy for train and test set but was overfitted
   - Random Forest performed relatively consistently throughout for accuracy and cross validation results
   - Random Forest was decided to be the final model for Genetic Disorder model and Disorder Subclass models
@@ -132,9 +136,8 @@ Imbalance
   - Error bars are standard deviation
 
 ### Random Forest Model Performance Comparison after SMOTE - Stratified against Genetic Disorder and Disorder Subclass
-![13](https://user-images.githubusercontent.com/92092401/163966110-7a33c310-eccc-453e-807b-f671f6f9e70a.JPG)
-![14](https://user-images.githubusercontent.com/92092401/163966211-56191c98-e0de-4952-b2ee-2f07f70796b4.JPG)
-
+![image11](https://user-images.githubusercontent.com/92092401/163974418-2c1f3a3c-ac8e-4756-8df8-a30b0c6710b2.png)
+![image12](https://user-images.githubusercontent.com/92092401/163974437-bf8fdfae-186f-4478-ae46-1cee004fc72e.png)
 
   - Genetic Disorder model
   - Stratification against Genetic Disorder during train test split showed better performance than stratification against Disorder Subclass
@@ -152,7 +155,8 @@ Imbalance
   - 6 was chosen for all KModes performed after different imbalance treatment methods.  Therefore, 6 points were picked at random to label as clusters. 
   - Dissimilarities were then calculated and each observation was assigned to the closest cluster. New modes of clusters were redefined and the process repeats until there is no more re-assignment of points.
   - After clustering with all types of imbalance treatments, all were found to be ineffective in grouping the different Genetic Disorder classes, particularly between single-gene and mitochondrial disorders.
-![kmode](https://user-images.githubusercontent.com/92092401/163967565-2c3dc442-6e93-444d-8872-bdc130eb39a7.JPG)
+![image8](https://user-images.githubusercontent.com/92092401/163974488-5423999a-5c57-451d-a991-addd0759d31e.png)
+
 
 
 ### Anomaly Detection - KNN
@@ -162,7 +166,8 @@ Imbalance
   - Hyperparameter was set such that a data point distance to its kth nearest neighbour is viewed as the outlying score and it can be interpreted as a measure of density
   - The contamination was set to change from 0.01 to 0.1
   - Multifactorial genetic inheritance disorders were less likely to be flagged as outliers at low contamination rate
-
+<img width="475" alt="image6" src="https://user-images.githubusercontent.com/92092401/163974546-b667e767-89dc-476b-8bfe-77cefb3d75d3.png">
+<img width="475" alt="image7" src="https://user-images.githubusercontent.com/92092401/163974579-7e67a504-31e6-422e-94f1-dfe15c53bfb9.png">
 
 
 ## Final Models 
@@ -171,6 +176,7 @@ Imbalance
   - Prediction of Genetic Disorder value by the main model decides which submodel to use to predict the Disorder Subclass value
   - Model to use was decided based on comparison of performance between different models
 
+![image13](https://user-images.githubusercontent.com/92092401/163974895-e8d1f3bc-4878-4586-8d7c-279af32d2ca4.png)
 
 
 
@@ -179,8 +185,10 @@ Imbalance
     - Combined model had accuracy of 24.9 and 24.3 percent for the train and test set respectively, above the baseline of 11.1 percent
   - Error bars are standard deviation.
 
-
-
+![image14](https://user-images.githubusercontent.com/92092401/163975183-e7363ca0-ad22-46fd-aefd-cc8edfe935c4.png)
+![image15](https://user-images.githubusercontent.com/92092401/163975200-688dbbef-9327-4de5-9564-c58c93c5b303.png)
+![image16](https://user-images.githubusercontent.com/92092401/163975220-32b7b16f-f42b-4241-b0ab-a388c78aa2f8.png)
+![image17](https://user-images.githubusercontent.com/92092401/163975228-0dc971ab-fe75-441e-a9f9-6064787bf719.png)
 
 
   - Variable importance was similar for Genetic Disorder model and Disorder Subclass models. 
