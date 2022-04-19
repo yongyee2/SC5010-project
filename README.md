@@ -48,8 +48,8 @@
 
 ![1](images/image22.png)
 
-### Imbalance Treatment
-Imbalance
+## Imbalance Treatment
+### Imbalance
   - Performance of models created were evaluated using original imbalance data
   - The results serve as a control to compare with other imbalance treatment methods
   - The imbalanced dataset was hypothesised to produce the worse performing models
@@ -211,6 +211,7 @@ Imbalance
     - Make sense that symptoms will shed light on both Genetic Disorder and the Disease Subclass.
 
 ## References
+  - Dataset: https://www.kaggle.com/datasets/aibuzz/predict-the-genetic-disorders-datasetof-genomes
   - https://machinelearningmastery.com/iterative-imputation-for-missing-values-in-machine-learning/
   - https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c
   - https://www.youtube.com/watch?v=peh2l4dePBc
